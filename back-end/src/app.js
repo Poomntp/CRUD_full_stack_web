@@ -36,6 +36,7 @@ app.get("/cars/:id", async (req, res) => {
 
 app.post("/cars", async (req, res) => {
   const newCar = req.body;
+  console.log(newCar);
   const car = await prisma.car.create({
     data: {
       licenseNo: newCar.licenseNo,
@@ -77,7 +78,7 @@ app.put("/cars/:id", async (req, res) => {
       licenseNo: updateCar.licenseNo,
       carBrand: updateCar.carBrand,
       carModel: updateCar.carModel,
-      carImg: newCar.carImg,
+      carImg: updateCar.carImg,
       note: updateCar.note,
     },
   });
