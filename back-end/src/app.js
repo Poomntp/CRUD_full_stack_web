@@ -41,9 +41,8 @@ app.post("/cars", async (req, res) => {
       licenseNo: newCar.licenseNo,
       carBrand: newCar.carBrand,
       carModel: newCar.carModel,
+      carImg: newCar.carImg,
       note: newCar.note,
-      createdBy: newCar.createdBy,
-      updatedBy: newCar.updatedBy,
     },
   });
 
@@ -78,8 +77,8 @@ app.put("/cars/:id", async (req, res) => {
       licenseNo: updateCar.licenseNo,
       carBrand: updateCar.carBrand,
       carModel: updateCar.carModel,
+      carImg: newCar.carImg,
       note: updateCar.note,
-      updatedBy: updateCar.updatedBy,
     },
   });
 
