@@ -5,9 +5,9 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleHomeClick = (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    navigate('/'); // Navigate to Home page
-    window.location.reload(); // Optionally, force a page reload
+    event.preventDefault();
+    navigate('/');
+    window.location.reload();
   };
 
   return (

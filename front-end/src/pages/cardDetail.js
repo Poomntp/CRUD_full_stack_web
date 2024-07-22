@@ -1,12 +1,12 @@
 // pages/DetailPage.js
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { PencilIcon } from '@heroicons/react/24/solid'; // Import the edit icon
+import { PencilIcon } from '@heroicons/react/24/solid';
 
 const DetailPage = () => {
-  const { id } = useParams(); // Extract ID from URL parameters
+  const { id } = useParams();
   const [car, setCar] = useState(null);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCarDetails = async () => {
@@ -25,7 +25,6 @@ const DetailPage = () => {
   if (!car) return <div>Loading...</div>;
 
   const handleEdit = () => {
-    // Navigate to the edit page with the car ID
     navigate(`/edit-car/${id}`);
   };
 

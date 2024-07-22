@@ -6,11 +6,11 @@ const Card = ({ title, description, imageUrl, onDelete, license, id }) => {
   const navigate = useNavigate();
 
   const handleDetailClick = () => {
-    navigate(`/detail/${id}`); // Navigate to detail page with id
+    navigate(`/detail/${id}`);
   };
 
   return (
-    <div className="relative w-80 bg-white rounded-xl shadow-md overflow-hidden hover:bg-gray-200">
+    <div className="relative w-80 bg-white rounded-xl shadow-md overflow-hidden">
       {imageUrl && (
         <img 
           src={imageUrl} 

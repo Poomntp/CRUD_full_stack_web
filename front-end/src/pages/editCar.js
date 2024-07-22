@@ -66,7 +66,6 @@ const EditCar = () => {
           console.log('Car updated:', result);
           Swal.fire('Success!', 'Car updated successfully!', 'success');
           
-          // Navigate to the detail page and refresh it
           navigate(`/detail/${id}`, { replace: true }); // replace: true ensures that this navigation does not create a new entry in the history stack
         } else {
           console.error('Failed to update car');
